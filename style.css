@@ -1,0 +1,178 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base layout */
+.frame {
+    display: grid;
+    gap: 5px;
+    background-color: rgb(174, 205, 208);
+    width: 30vw;
+    height: 50vh;
+    margin: 10% auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 5px rgba(30, 29, 29, 0.2);
+    grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr 3fr 1fr 3fr 1fr;
+}
+
+.display {
+    margin-top: 20px;
+    display: flex;
+    grid-area: 2/2/3/7;
+    font-size: 70px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: rgb(135, 171, 171);
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 30px 1px rgba(96, 91, 91, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    grid-area: 4/2/5/3;
+    color: aliceblue;
+    background-color: rgb(130, 177, 177);
+    border-style: none;
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: inset 0px 0px 30px 1px rgba(96, 91, 91, 0.2);
+    font-size: 25px; 
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(116, 156, 156); 
+}
+
+button:active {
+    box-shadow: 0 0px rgb(116, 156, 156); 
+}
+
+.start, .stop {
+    font-size: 25px;
+    font-family: "Georgia";
+    font-weight: bold;
+    color: aliceblue;
+    background-color: rgb(130, 177, 177);
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 30px 1px rgba(96, 91, 91, 0.2);
+    border: none;
+}
+
+.start {
+    grid-area: 4/4/5/5;
+}
+
+.stop {
+    grid-area: 4/6/5/7;
+}
+
+.reset {
+    margin-top: 20px;
+    padding: 10px 0;
+    margin-left: 60px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/6/2/7;
+    width: 50px;
+    background-color: rgb(130, 177, 177);
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 30px 1px rgba(96, 91, 91, 0.2);
+    border: none;
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+
+/* Large monitors (above 1600px wide) */
+@media (min-width: 1600px) {
+    .frame {
+        width: 25vw;
+        height: 45vh;
+    }
+    .display {
+        font-size: 90px;
+    }
+}
+
+/* Laptops (1024px to 1599px) */
+@media (min-width: 1024px) and (max-width: 1599px) {
+    .frame {
+        width: 35vw;
+        height: 50vh;
+    }
+    .display {
+        font-size: 70px;
+    }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .frame {
+        width: 60vw;
+        height: 55vh;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .display {
+        font-size: 55px;
+    }
+    .counter {
+        font-size: 22px;
+    }
+    .start, .stop {
+        font-size: 22px;
+    }
+    .reset {
+        margin-left: 40px;
+        width: 45px;
+    }
+}
+
+/* Smartphones (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .frame {
+        width: 80vw;
+        height: 55vh;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .display {
+        font-size: 45px;
+    }
+    .counter {
+        font-size: 20px;
+    }
+    .start, .stop {
+        font-size: 20px;
+    }
+    .reset {
+        margin-left: 30px;
+        width: 40px;
+    }
+}
+
+/* Small smartphones (below 480px) */
+@media (max-width: 479px) {
+    .frame {
+        width: 90vw;
+        height: 50vh;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .display {
+        font-size: 35px;
+    }
+    .counter {
+        font-size: 18px;
+    }
+    .start, .stop {
+        font-size: 18px;
+    }
+    .reset {
+        margin-left: 20px;
+        width: 35px;
+    }
+}

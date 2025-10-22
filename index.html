@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="display">0:00</div>
+      <input type="number" class="counter" value="0" min="0" max="100" />
+      <button id="disable" class="start">START</button>
+      <button class="stop">STOP</button>
+      <button class="reset">
+        <img src="./arrow-counterclockwise.svg" width="30px" />
+      </button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
